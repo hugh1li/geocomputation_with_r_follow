@@ -16,3 +16,4 @@ wtf3 <- function(df = mtcars, test = 'stupid'){
   test<- enexpr(test) 
   df %>% mutate(!! test := mpg) %>% mutate(!!test := !!sym(test) + 1)
 }
+head(wtf3())
